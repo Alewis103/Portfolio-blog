@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 var pg = require('pg');
 var bodyParser = require('body-parser');
-var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
-
+var connectionString =DATABASE_URL ||'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+var port = port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.set('views', "./views");
 
@@ -80,10 +80,10 @@ app.get("/blogposts/:id", function(req, res) {
 });
 
 
-// app.get("*", function(req, res) {
-//     res.redirect('/')
-// });
+app.get("*", function(req, res) {
+    res.redirect('/')
+});
 
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log("your app is listening on port 3000");
 });
