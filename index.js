@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var pg = require('pg');
 var bodyParser = require('body-parser');
-var connectionString =DATABASE_URL ||'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+// var connectionString =DATABASE_URL ||'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
 var port = port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.set('views', "./views");
