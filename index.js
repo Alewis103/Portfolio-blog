@@ -19,7 +19,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/add", function(req, res) {
-    pg.connect(connectionString, function(err, client, done) {
+    pg.connect(DATABASE_URL, function(err, client, done) {
         client.query("select * from users", function(err, result) {
             res.render("add", {
                 data: result.rows
@@ -32,7 +32,7 @@ app.get("/add", function(req, res) {
 });
 
 app.post("/users", function(req, res) {
-    pg.connect(connectionString, function(err, client, done) {
+    pg.connect(DATABASE_URL, function(err, client, done) {
         client.query(`insert into users (username) values('${req.body.username}')`, function(err, result) {
             res.redirect("/")
             console.log(`*****inserted '${req.body.username}'*****`);
@@ -43,7 +43,7 @@ app.post("/users", function(req, res) {
 });
 
 app.post("/blogposts", function(req, res) {
-    pg.connect(connectionString, function(err, client, done) {
+    pg.connect(DATABASE_URL, function(err, client, done) {
         client.query(`select * from users where username = '${req.body.name}'`, function(err, result) {
             console.log("supposed record: " + result.rows[0].id);
             var id = parseInt(result.rows[0].id);
@@ -68,7 +68,7 @@ app.get("/blogposts", function(req, res) {
     })
 });
 app.get("/blogposts/:id", function(req, res) {
-    pg.connect(connectionString, function(err, client, done) {
+    pg.connect(DATABASE_URL, function(err, client, done) {
         client.query(`select * from blogposts where id = ${req.params.id}`, function(err, result) {
             res.render('show', {
                 data: result.rows[0].body
