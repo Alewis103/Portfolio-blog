@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>tumbly</title>
+  </head>
+  <body>
+
+
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Choose a username</button>
+    <div id="myDropdown" class="dropdown-content">
+      <% for (var i =0; i<data.length; i++) {%>
+          <a class="chsn"><%= data[i].username %></a>
+          <% } %>
+          <a id ="add"> add a user</a>
+    </div>
+  </div>
+
+
+
+
+  <form class="frm" action="/users" method="post">
+    <h1>Add a user</h1>
+    <div class="">
+          <input type="text" name="username" value="" placeholder="Enter a username">
+    </div>
+    <input type="submit" name="" value="Add User">
+  </form>
+
+
+<form class="frm2" action="/blogposts" method="post">
+  <h1 id="usr"></h1>
+  <a href="blogposts">View All blog posts</a>
+  <a href="blogposts:">View this users blog posts</a>
+  <input  hidden type="text" name="name" id="the_id" value="">
+  <div class="">
+    <input type="text" name="title" value="" placeholder="Enter a title">
+  </div>
+  <div class="">
+    <textarea name="body" rows="8" cols="80" placeholder="Enter a blog post"></textarea>
+  </div>
+  <input type="submit" name="" value="Add post">
+</form>
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js">
+
+  </script>
+</html>

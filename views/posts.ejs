@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <% for (var i =0; i<data.length; i++) {%>
+              <li><a href=<%="/blogposts/" + data[i].id%>><%= data[i].title %></a></li>
+            <% } %>
+    </ul>
+</body>
+</html>

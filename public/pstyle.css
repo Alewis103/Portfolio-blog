@@ -1,0 +1,97 @@
+.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.siema1 {
+    height:500px;
+    width: 400px;
+}
+
+#myImg {
+    height: 470px;
+    width: 400px;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    background: black url(http://68.media.tumblr.com/0326040ae6f27a19d78cbb960ed0191e/tumblr_nsycniiOxY1txeruoo1_540.gif) center center;
+    background-size: cover;
+}
+
+#clocktower, #calculator, #weather,#juke {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+p {
+    width: 60%;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+body {
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+header {
+    color: white;
+    position: relative;
+    height: 100vh;
+    background: url(http://68.media.tumblr.com/eaa6363fdd29d16bfd91ed066e9746ab/tumblr_o7x1h2ui4W1ukofkbo1_r2_1280.jpg) bottom right;
+    background-size: cover;
+    overflow: auto;
+}
+
+#about {
+    color: white;
+    position: relative;
+    height: 100vh;
+    background: black bottom right;
+    background-size: cover;
+    overflow: auto;
+}
+#projects{
+  position: relative;
+  height: 100vh;
+  background: #169990 bottom right;
+  background-size: cover;
+  overflow: auto;
+}
+#projects i{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#contact i{
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.icon_txt{
+  font-size: 20pt;
+  padding-left: 13px;
+}
